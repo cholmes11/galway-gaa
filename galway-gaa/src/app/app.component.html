@@ -1,10 +1,10 @@
-<div class="toolbar-container">
-  <h1>Galway GAA</h1>
-  <nav>
-<!--    <div *ngFor="let route of appRoutes">-->
+<mat-toolbar>
+  <mat-toolbar-row>Galway GAA</mat-toolbar-row>
+  <mat-toolbar-row>
+    <nav mat-tab-nav-bar>
       <a *ngFor="let route of appRoutes" mat-tab-link [routerLink]="route.routerLink">{{ route.routerName }}</a>
-<!--    </div>-->
-  </nav>
-</div>
+    </nav>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

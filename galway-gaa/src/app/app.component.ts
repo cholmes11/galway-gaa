@@ -9,11 +9,13 @@ import {AppRoute} from './shared/models/AppRoute';
 export class AppComponent implements OnInit {
   title = 'galway-gaa';
 
-  appRoutes: AppRoute[];
+  appRoutes: AppRoute[] = [
+    new AppRoute('Leagues', '/leagues'),
+    new AppRoute('Fixtures', '/fixtures'),
+    new AppRoute('Results', '/results')
+  ];
 
   ngOnInit() {
-    this.appRoutes = [
-      new AppRoute('Tables', '/tables')
-    ];
+
   }
 }
