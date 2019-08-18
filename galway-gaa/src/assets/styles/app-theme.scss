@@ -1,0 +1,59 @@
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+@include mat-core();
+
+$galway-maroon: (
+  50 : #f4e2e2,
+  100 : #e4b6b6,
+  200 : #d38686,
+  300 : #c15656,
+  400 : #b33131,
+  500 : #a60d0d,
+  600 : #9e0b0b,
+  700 : #950909,
+  800 : #8b0707,
+  900 : #7b0303,
+  A100 : #ffa8a8,
+  A200 : #ff7575,
+  A400 : #ff4242,
+  A700 : #ff2929,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+// For each palette, you can optionally specify a default, lighter, and darker hue.
+$app-primary: mat-palette($galway-maroon);
+$app-accent:  mat-palette($galway-maroon, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$app-warn:  mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$galway-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+$default-primary-color: map-get($galway-maroon, 500);
+$default-primary-color-400: map-get($galway-maroon, 400);
+$default-primary-color-A100: map-get($galway-maroon, A100);
+
+@include angular-material-theme($galway-theme);
+
+// Add custom fonts to Angular components
+$custom-typography: mat-typography-config(
+  $font-family: 'Lexend Deca'
+);
+
+@include angular-material-typography($custom-typography);

@@ -1,0 +1,23 @@
+@import '../assets/styles/app-theme';
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.3);
+
+  mat-toolbar-row {
+    height: 48px;
+
+    .mat-tab-link {
+      &.mat-tab-label-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.router-content {
+  margin-top: 96px;
+}

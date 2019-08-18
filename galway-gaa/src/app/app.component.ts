@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
     new AppRoute('Results', '/results')
   ];
 
+  activeRoute = this.appRoutes[0];
+
   ngOnInit() {
 
   }
