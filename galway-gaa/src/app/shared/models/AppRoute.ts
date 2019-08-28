@@ -1,7 +1,7 @@
 export class AppRoute {
   constructor(
-    public routerName: string,
-    public routerLink: string
+    public routerName?: string,
+    public routerLink?: string
   ) {
   }
 }

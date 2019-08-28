@@ -1,1 +1,46 @@
-<p>leagues-view works!</p>
+
+<!--<div style="height: 100%" fxLayout="row" fxLayout.xs="column">-->
+<!--  <div fxFlex="200px" class="sidenav">-->
+<!--    <a *ngFor="let division of divisions">-->
+<!--      <div class="sidenav-link">{{ division.name }}</div>-->
+<!--    </a>-->
+<!--  </div>-->
+
+<!--  <div fxFlex class="main-content">-->
+<!--    <div class="main-card">-->
+<!--      This is the main card - Datatable to go here!-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<mat-sidenav-container>
+  <mat-sidenav [mode]="over" [opened]="opened" [fixedInViewport]="true">
+    <div class="navigation vertical">
+        <div *ngFor="let division of divisions" class="navigation-link"
+             (click)="activeDivision = division"
+             [ngClass]="{'active-nav-link': division === activeDivision}">{{ division.name }}</div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+<!--    <div fxShow="false" fxShow.lt-md class="navigation horizontal">-->
+<!--      <gg-horizontal-sub-nav numOfColumns="4" [navItems]="divisions"></gg-horizontal-sub-nav>-->
+<!--      <div fxFlex="calc(25%-8px)" *ngFor="let division of divisions" class="navigation-link">{{ division.name }}</div>-->
+
+<!--      &lt;!&ndash; Add four extra divs &ndash;&gt;-->
+<!--      <div fxFlex="calc(25%-8px)"></div>-->
+<!--      <div fxFlex="calc(25%-8px)"></div>-->
+<!--      <div fxFlex="calc(25%-8px)"></div>-->
+<!--      <div fxFlex="calc(25%-8px)"></div>-->
+
+<!--    </div>-->
+
+    <div class="main-content">
+      <div class="main-card">
+        This is the main card - Datatable to go here!
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
